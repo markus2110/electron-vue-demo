@@ -4,7 +4,7 @@
 
 
         <div v-if="demoRecords.length > 0">
-            <p v-for="record in demoRecords">{{ record }}</p>
+            <p v-for="(record, index) in demoRecords" v-bind:key="{index}">{{ record }}</p>
         </div>
         <div  v-else>
             <span>Loading ...</span>

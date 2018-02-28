@@ -7,6 +7,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>Id</th>
                     <th>Name</th>
                     <th>Done</th>
@@ -14,7 +15,8 @@
             </thead>
 
             <tbody  v-if="demoRecords.length > 0">
-                <tr class="record" v-bind:class="{ done: record.done }" v-for="record in demoRecords">
+                <tr class="record" v-bind:class="{ done: record.done }" v-for="(record, index) in demoRecords" v-bind:key="{ index }">
+                    <td>{{ index }}</td>
                     <td>{{ record.id }}</td>
                     <td>{{ record.name }}</td>
                     <td><input type="checkbox" v-bind:checked="record.done ? 'checked' : ''" v-on:change="toggleDone(record)" /></td>
