@@ -6,12 +6,18 @@ const electron  = require("electron");
 const path      = require('path');
 const url       = require('url');
 
+const ENV_DEV_MODE  = "DEVELOP";
+const ENV_PROD_MODE = "PRODUCTION";
+
 const {app, BrowserWindow} = electron;
 
 // Behalten Sie eine globale Referenz auf das Fensterobjekt.
 // Wenn Sie dies nicht tun, wird das Fenster automatisch geschlossen,
 // sobald das Objekt dem JavaScript-Garbagekollektor übergeben wird.
 let win;
+
+// Set the application to DEV MODE
+process.env.NODE_ENV = ENV_DEV_MODE;
 
 function createWindow () {
     // Create the browser window.
@@ -26,7 +32,10 @@ function createWindow () {
 
 
     // Öffnen der DevTools.
-    //win.webContents.openDevTools();
+    if(process.env.NODE_ENV === ENV_DEV_MODE){
+        win.webContents.openDevTools();
+    }
+    
 
     // Ausgegeben, wenn das Fenster geschlossen wird.
     win.on('closed', () => {
