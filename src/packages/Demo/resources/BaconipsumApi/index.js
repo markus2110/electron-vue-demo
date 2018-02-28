@@ -1,0 +1,1 @@
+const URL = "https://baconipsum.com/api/?type=meat-and-filler&paras=50&start-with-lorem=1&format=json";
