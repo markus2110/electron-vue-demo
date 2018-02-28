@@ -21,9 +21,8 @@ npm run package-win
 npm run package-linux
 
 ```
-//
 For detailed explanation on how things work, consult the
-[electron first app](https://electronjs.org/docs/tutorial/first-app)
-[electron tutorials](https://www.christianengvall.se/category/electron/)
-[electron packager tutorial](https://www.christianengvall.se/electron-packager-tutorial/)
+[electron first app](https://electronjs.org/docs/tutorial/first-app)   
+[electron tutorials](https://www.christianengvall.se/category/electron/)   
+[electron packager tutorial](https://www.christianengvall.se/electron-packager-tutorial/)   
 [docs for vue-loader](https://vue-loader.vuejs.org/en/)
