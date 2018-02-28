@@ -15,7 +15,7 @@
             </thead>
 
             <tbody  v-if="demoRecords.length > 0">
-                <tr class="record" v-bind:class="{ done: record.done }" v-for="(record, index) in demoRecords" v-bind:key="{ index }">
+                <tr class="record" v-bind:class="{ done: record.done }" v-for="(record, index) in demoRecords" v-bind:key="record.id">
                     <td>{{ index }}</td>
                     <td>{{ record.id }}</td>
                     <td>{{ record.name }}</td>

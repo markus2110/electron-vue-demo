@@ -4,7 +4,7 @@
 
 
         <div v-if="demoRecords.length > 0">
-            <p v-for="(record, index) in demoRecords" v-bind:key="{index}">{{ record }}</p>
+            <p v-for="record in demoRecords">{{ record }}</p>
         </div>
         <div  v-else>
             <span>Loading ...</span>
@@ -22,7 +22,8 @@
 
         computed: {
             demoRecords : function(){
-                return this.$store.getters["DemoPackage/Lorem/allRecords"];
+                let records = this.$store.getters["DemoPackage/Lorem/allRecords"];
+                return records;
             }
         }
 
